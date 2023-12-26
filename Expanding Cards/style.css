@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=REM:wght@500&family=Roboto:wght@300&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family:'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow:hidden;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(181,169,162,1) 49%, rgba(73,56,56,1) 100%);
+}
+.container{
+    display: flex;
+     width: 90vw;
+     
+}
+.panel
+{
+    background-size: cover;/* to preserve the round corners on large screens*/
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    color: white;
+  
+}
+.panel h1{
+    font-weight: 400;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    margin: auto;
+    opacity: 0;
+    
+    }
+ .panel.active{
+    flex: 5;
+    
+ }
+
+ .panel.active h1{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+ }
+
+ @media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display:none;
+    }
+ }
